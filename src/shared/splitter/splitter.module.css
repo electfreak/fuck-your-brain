@@ -1,0 +1,30 @@
+.splitter {
+  display: flex;
+  flex-grow: 1;
+}
+
+.resizer {
+  width: 16px;
+  display: flex;
+  cursor: col-resize;
+}
+
+.resizer.active {
+  background-color: lightgrey;
+}
+
+.resizer:hover::after,
+.resizer.active:after {
+  background-color: cornflowerblue;
+}
+
+.resizer::after {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 45px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: lightgrey;
+  transition: 0.3s;
+}
